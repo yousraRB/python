@@ -6,7 +6,7 @@ print(x**y)"""
 
 
 """: Etant donnée un nombre réel positive, Effectuez les transformations suivantes : Un pied est
-divisé en 12 pouces. Convertissez le pied donnée en entrée par l’utilisateur (le nombre réel positive) en
+divisé en 12 pouces.Convertissez le pied donnée en entrée par l’utilisateur (le nombre réel positive) en
 pouces. Un pied correspond à 1/3 de verge anglaise (yard), c'est-à-dire 0,3048 mètre. Transformez le
 nombre qui à l’unité pied en mètre. Transformez le nombre obtenu dans la question précédente en
 centimètre et en kilomètre.
@@ -69,7 +69,7 @@ while nbr!=0 :
 print("kyn ",cpt ,"fois",c,"dans",a)"""
 """Ecrire un programme qui permet de déterminer si un nombre est uniforme. Un nombre est
 uniforme si tout ses chiffres sont identitiques."""
-u=int(input("medli nombre ta3k"))
+"""u=int(input("medli nombre ta3k"))
 un=u
 x=False
 c=u%10
@@ -81,7 +81,7 @@ while u!=0 and x==False :
 if u==0 :
     print (un,"est uniforme")
 else :
-    print(un,"nest pas uniforme")
+    print(un,"nest pas uniforme")"""
 
     
 
