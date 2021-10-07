@@ -5,10 +5,19 @@ un ou plusieurs musiciens. Un musicien ne peut participer qu’à une seule repr
 • Programmer (idProgrammer , #Num_Rep , tarif)
 1. La liste des titres des représentations.
 2. La liste des titres des représentations ayant lieu au «  alg».
-3. La listeti des noms des musiciens et les titres des représentaons auxquelles ils participent.
+3. La liste des noms des musiciens et les titres des représentaons auxquelles ils participent.
 4. Le nombre des musiciens qui participent à la représentations n°2."""
 
 import sqlite3
+
+
+
+
+
+
+
+
+
 """nc=sqlite3.connect("exo.db")
 nc.execute(" CREATE TABLE REPRESENTATI(num INTEGER  PRIMARY KEY ,titre char(20) ,lieu varchar(20) );")
 nc.execute("CREATE TABLE MUSICIEN (num INTEGER PRIMARY KEY,nom char(20),numrep INTEGER ,FOREIGN KEY(numrep) REFERENCES REPRESENTATION(num));")
@@ -26,24 +35,28 @@ nc.execute("INSERT INTO  PROGRAMMER  VALUES (?,?,?) ;",(11111,111,15.44))
 
 nc.execute("INSERT INTO  PROGRAMMER  VALUES (?,?,?) ;",(22222,221,10.44))
 nc.commit()"""
+#liste titres de represenation
 """nc=sqlite3.connect("exo.db")
 titre=nc.execute("SELECT titre FROM REPRESENTATION ;")
 for t in titre :
     print (t[0])
 nc.close()
 """
+#liste titres de represntation lieu alg
 """nc=sqlite3.connect("exo.db")
 titre = nc.execute("SELECT titre FROM REPRESENTATION WHERE lieu= ? ;",("alg",))
 for t in titre :
     print (t[0])
 nc.close()
 """
+#La liste des noms des musiciens et les titres des représentaons auxquelles ils participent
 """nc=sqlite3.connect("exo.db")
 nc.execute("INSERT INTO MUSICIEN VALUES (?,?,?) ;", (1001,"KIKA",222))
 nom=nc.execute("SELECT M.nom ,R.titre FROM MUSICIEN M ,  REPRESENTATION R WHERE M.numrep=R.num and M.nom=? ;",("KIKA",) )
 for n in nom :
-    print (" nom :",n[0],"titre :", n[1])
+    print ("nom :",n[0],"titre :", n[1])
 nc.close()"""
+#Le nombre des musiciens qui participent à la représentations n°2.
 """nc=sqlite3.connect("exo.db")
 nombre=nc.execute("SELECT COUNT(*) AS NOMBRE FROM  REPRESENTATION WHERE num=? ;",(111,))
 for n in nombre :

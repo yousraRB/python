@@ -30,7 +30,7 @@ créer une nouvelle contenant les éléments de la première liste sans répéti
 l=[1,1,1,1,1,2,2,2,3,3,3,3,3,3]
 print(set(l))
 """
-
+#fonction supprime les repetitions 
 
 """Soit la liste suivante: liste = [1, 2, ['x', 'y', 'z']]
 • afficher le chiffre 2
@@ -43,7 +43,7 @@ print(l[1])
 print(l[2][1])
 print(l[2][:2])
 """
-
+#l.append(val) pour ajout un valeur dans une liste
 """n=int(input("taille"))
 l=[]
 for i in range (n):

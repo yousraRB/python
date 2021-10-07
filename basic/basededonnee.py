@@ -39,7 +39,7 @@ for r in resault :
 db.close ()"""
 
 
-#rechercher un informationdans la base 
+#rechercher un information dans la base 
 """db=sqlite3.connect("first.db")
 resault=db.execute("SELECT * FROM ETUDIANT WHERE matricule=? ;",("202031050460",))
 for r in resault:
@@ -47,7 +47,7 @@ for r in resault:
 db.close()"""
 #insere des valeur en representaion affiche et recherche ...self.
 rp=sqlite3.connect("first.db")
-rp.execute("INSERT INTO REPRESENTAION VALUES (?,?,?);",(600,"kike" ,"alg"))
+rp.execute("INSERT INTO REPRESENTAION VALUES (?,?,?);",(2200,"kike" ,"alg"))
 rp.commit()
 rp.close()
 #affiche linfo
@@ -58,9 +58,11 @@ for i in info :
 rp.close ()
 #recherche info 
 rp=sqlite3.connect("first.db")
-reso=rp.execute("SELECT lieu FROM REPRESENTAION WHERE num=? ;",(100,))
+reso=rp.execute("SELECT lieu FROM REPRESENTAION WHERE num=? ;",(2200,))
 for j in reso :
        print (j[0])
+       
+
 
 
 

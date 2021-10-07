@@ -19,7 +19,7 @@ f.close()"""
 """Exercice: Ecrire un programme permettant de regrouper dans une liste les mots commun de F1 et F2
 que vous allez créer vous même."""
 
-"""f=open("fichie.txt","w")
+"""f=open("fichier.txt","w")
 n=int (input ("taille  de f:"))
 for i in range (n):
     val=input("kelma ")
@@ -90,6 +90,10 @@ la décision dec (admis, refusé et ajourné). Exemple :Le pourcentage des candi
         decision=input(" decision : refuse/admis/ajourne")
         f.write(nom  +";" + prenom  +";"  + str(age)+";" + decision +"\n" )
     f.close ()
+"""
+#la fonction str me entier to string 
+#split : string to liste          strip: supprime 
+"""
 def admis ():
     f=open("concour.txt","r")
     g=open("admis.txt","w")
