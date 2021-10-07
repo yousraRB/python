@@ -100,3 +100,18 @@ print ("Afficher les noms des pilotes qui conduisent un AIRBUS")
 np=db.execute("SELECT p.nom FROM PILOTE P,VOL v,AVION a WHERE p.n=v.np and a.NA=v.na and a.nom=? ;",("AIRBUS",))
 for n in np :
     print(n[0])
+#7) Modifier la capacité de l’avion numéro 101,
+print ("la nouvelle capacité et 220")
+#update: pour modifier 
+db.execute("UPDATE  AVION  SET capacite=999 WHERE NA=101 ;")
+db.commit()
+np=db.execute("SELECT capacite FROM AVION WHERE NA=101 ;")
+for n in np :
+    print (n[0])
+#8)Supprimer les avions dans la capacité et inférieure à 300
+print("apres la suppression ")
+db.execute("DELETE  FROM AVION WHERE capacite<=300 ;")
+db.commit()
+np=db.execute("SELECT * FROM AVION  ;")
+for n in np :
+    print (n[0],n[1],n[2],n[3])
